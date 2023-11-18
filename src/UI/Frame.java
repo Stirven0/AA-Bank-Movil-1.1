@@ -56,6 +56,7 @@ public class Frame extends javax.swing.JFrame {
         textButonEstilo = new javax.swing.JLabel();
         logoStilo = new javax.swing.JLabel();
         TextFieldEstilo = new javax.swing.JTextField();
+        eliminarUsuario = new javax.swing.JLabel();
         fondoLogin = new javax.swing.JPanel();
         Loguin = new javax.swing.JPanel();
         usuarioLogin = new javax.swing.JTextField();
@@ -68,7 +69,6 @@ public class Frame extends javax.swing.JFrame {
         userListPanel = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         userList = new javax.swing.JList<>();
-        eliminarUsuario = new javax.swing.JLabel();
         fondo = new javax.swing.JLabel();
         fondoInicio = new javax.swing.JPanel();
         Inicio = new javax.swing.JPanel();
@@ -154,6 +154,16 @@ public class Frame extends javax.swing.JFrame {
 
         TextFieldEstilo.setBackground(new java.awt.Color(236, 224, 232));
         TextFieldEstilo.setText("jTextField1");
+
+        eliminarUsuario.setBackground(textButonEstilo.getBackground());
+        eliminarUsuario.setFont(textButonEstilo.getFont());
+        eliminarUsuario.setForeground(textButonEstilo.getForeground());
+        eliminarUsuario.setHorizontalAlignment(textButonEstilo.getHorizontalAlignment());
+        eliminarUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                eliminarUsuarioMouseClicked(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("AA Bank Movil");
@@ -248,41 +258,21 @@ public class Frame extends javax.swing.JFrame {
         userList.setForeground(TextFieldEstilo.getForeground());
         jScrollPane3.setViewportView(userList);
 
-        eliminarUsuario.setBackground(textButonEstilo.getBackground());
-        eliminarUsuario.setFont(textButonEstilo.getFont());
-        eliminarUsuario.setForeground(textButonEstilo.getForeground());
-        eliminarUsuario.setHorizontalAlignment(textButonEstilo.getHorizontalAlignment());
-        eliminarUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                eliminarUsuarioMouseClicked(evt);
-            }
-        });
-
         javax.swing.GroupLayout userListPanelLayout = new javax.swing.GroupLayout(userListPanel);
         userListPanel.setLayout(userListPanelLayout);
         userListPanelLayout.setHorizontalGroup(
             userListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, userListPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(eliminarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33))
-            .addGroup(userListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(userListPanelLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(125, Short.MAX_VALUE)))
+            .addGroup(userListPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(125, Short.MAX_VALUE))
         );
         userListPanelLayout.setVerticalGroup(
             userListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(userListPanelLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(eliminarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(35, Short.MAX_VALUE))
-            .addGroup(userListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, userListPanelLayout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, userListPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout LoguinLayout = new javax.swing.GroupLayout(Loguin);

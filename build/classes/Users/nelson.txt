@@ -1,0 +1,1 @@
+nelson;1234567;Nelson Cotes;123456789;3117777245;calle 12 carrera 18;cotesyepez@gmail.com;0;18;2023:11:17:13:44;
